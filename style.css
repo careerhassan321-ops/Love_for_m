@@ -1,0 +1,339 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow-x:hidden;
+min-height:100vh;
+background:linear-gradient(
+135deg,
+#ff4f8b,
+#ff77b7,
+#a855f7,
+#6d28d9
+);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+color:white;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* LOGIN */
+
+.login-page{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.login-card{
+width:100%;
+max-width:420px;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(18px);
+box-shadow:0 8px 30px rgba(0,0,0,.25);
+text-align:center;
+}
+
+.login-card h1{
+margin-bottom:10px;
+}
+
+.subtitle{
+margin-bottom:25px;
+opacity:.9;
+}
+
+.login-card input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:12px;
+outline:none;
+font-size:16px;
+}
+
+#loginBtn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+background:white;
+color:#ff4f8b;
+transition:.3s;
+}
+
+#loginBtn:hover{
+transform:scale(1.05);
+}
+
+#loginMessage{
+margin-top:15px;
+font-weight:600;
+}
+
+/* PROPOSAL */
+
+.proposal-page{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.glass-card{
+max-width:850px;
+width:100%;
+padding:40px;
+text-align:center;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(18px);
+box-shadow:0 8px 35px rgba(0,0,0,.25);
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.main-title{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.love-text{
+font-size:1.2rem;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.buttons{
+margin-top:30px;
+position:relative;
+height:140px;
+}
+
+#yesBtn,
+#noBtn{
+padding:16px 35px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
+font-weight:700;
+transition:.3s;
+}
+
+#yesBtn{
+background:white;
+color:#ff4f8b;
+margin-right:15px;
+}
+
+#yesBtn:hover{
+transform:scale(1.1);
+}
+
+#noBtn{
+background:#ff2e6f;
+color:white;
+}
+
+#funnyMessage{
+margin-top:25px;
+font-size:20px;
+font-weight:700;
+min-height:40px;
+}
+
+/* SUCCESS PAGE */
+
+.success-page{
+display:none;
+padding:50px 20px;
+}
+
+.success-card{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.success-card h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.success-card h2{
+margin-bottom:20px;
+}
+
+.promise-box{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(18px);
+padding:30px;
+border-radius:25px;
+line-height:2;
+font-size:18px;
+margin-top:25px;
+}
+
+.forever{
+margin-top:25px;
+font-size:2rem;
+}
+
+/* GALLERY */
+
+.gallery{
+margin-top:50px;
+}
+
+.photos{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.photos img{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid rgba(255,255,255,.3);
+transition:.3s;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+
+/* REASONS */
+
+.reasons{
+margin-top:60px;
+}
+
+.reasons h2{
+margin-bottom:25px;
+}
+
+#reasonsList{
+list-style:none;
+max-width:800px;
+margin:auto;
+}
+
+#reasonsList li{
+background:rgba(255,255,255,.12);
+padding:15px;
+margin-bottom:12px;
+border-radius:15px;
+}
+
+/* HEARTS */
+
+.heart{
+position:fixed;
+font-size:24px;
+pointer-events:none;
+animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+/* FIREWORKS */
+
+.firework{
+position:fixed;
+width:8px;
+height:8px;
+border-radius:50%;
+background:white;
+pointer-events:none;
+animation:explode 1.2s linear forwards;
+}
+
+@keyframes explode{
+0%{
+transform:scale(1);
+opacity:1;
+}
+100%{
+transform:translate(
+var(--x),
+var(--y)
+) scale(0);
+opacity:0;
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+font-size:2rem;
+}
+
+.love-text{
+font-size:1rem;
+}
+
+.success-card h1{
+font-size:2.5rem;
+}
+
+.promise-box{
+font-size:16px;
+}
+
+.photos img{
+width:100%;
+max-width:320px;
+height:auto;
+}
+
+#yesBtn,
+#noBtn{
+font-size:16px;
+padding:14px 25px;
+}
+
+}
