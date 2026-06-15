@@ -34,8 +34,8 @@ loginBtn.addEventListener("click", () => {
         document.getElementById("password").value;
 
     if(
-        username === "123" &&
-        password === "123"
+        username === "DodoKissBuggu" &&
+        password === "26May2026"
     ){
 
         loginPage.style.display = "none";
